@@ -13,7 +13,7 @@ function makePassword(maxLengthPass) {
    // Create allPossibilities var
     var possibleLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
      var possibleNumbers = "0123456789";
-     var possibleChars = "()-+#_<>/*[]~%&€!?=:";
+     var possibleChars = "()-+#_<>/*[]~%&€!?=:@.;{}";
      var allPossibilities = "";
 
    // create allPossibilities string //OPTIMIZE find better, more efficient solution!
