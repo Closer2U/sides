@@ -1,7 +1,10 @@
 body{
   background-color: #e7e5e4;
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  font-size: 32px;
+}
+
+span{
+ font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 38px;
 }
 
 h1 {
