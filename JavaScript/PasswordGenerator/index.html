@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- CSS -->
+    <!--<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />-->
+    <!--<link href="http://fonts.cdnfonts.com/css/press-start-2p" rel="stylesheet" />-->
+    <link href="nes.min.css" rel="stylesheet">
+    <link href="password.css" rel="stylesheet">
+
+
+<!-- JavaScript -->
+    <script type="text/javascript" src="copyer.min.js"></script>
+    <script type="text/javascript" src="password.js"></script>
+                
+    <title>Password Generator</title>
+</head>
+<body>
+    <div>
+
+        <div class="generatorContainer nes-container is-dark with-title">
+            <p class="title">  <h1>Password Generator</h1> </p>
+            <p>Create Password with custom length.</p>
+
+            <div style="background-color:#212529; padding: 1rem;" class="nes-field is-inline">
+                <label for="dark_field" style="color:#fff;"> Password length: </label>
+                <input type="text" id="dark_field" class="nes-input is-dark" placeholder="for a secure password choose at least 8">
+            </div>
+
+            <div class="options">
+                <div style="background-color:#212529; padding: 1rem 0;">
+                    <label>
+                    <input id="charsChecked" type="checkbox" class="nes-checkbox is-dark" unchecked />
+                    <span>include Special Characters</span>
+                    </label>
+                </div>
+
+                <div style="background-color:#212529; padding: 1rem 0;">
+                    <label>
+                      <input id="numbersChecked" type="checkbox" class="nes-checkbox is-dark" unchecked />
+                      <span>include Numbers</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="js">
+                 <a class="nes-btn" onclick="javascript: makePassword()" href="#">Generate!</a>
+            </div>
+
+            <br> </br>
+
+            <div class="nes-container is-dark with-title">
+                <p class="title">Your password:</p>
+                <p style="text-align: center; font-size: 3rem;" id="yourPassword"></p>
+            </div>
+
+            <div>
+                <span><a class="nes-btn" onclick="javascript: copyPW()" href="#" style="align-self: flex-end;"> Copy! </a></span>
+
+               <span id="isCopied" class="hidden" >
+                    <span style="background-color:#212529; padding: 1rem 0;">
+                        <label>
+                        <input type="checkbox" class="nes-checkbox is-dark" checked />
+                        <span>COPIED to clipboard!</span>
+                        </label>
+                    </span>
+                </span>
+            </div>
+
+            <br></br>
+            
+            <a id="backNES" class="nes-btn" href="../index.html"><</a>
+            
+           <!-- <progress class="nes-progress" value="90" max="100"></progress> --> 
+        </div>
+
+    </div>
+</body>
+
+<!-- 
+TODO eingeben, was an die makePassword() übergeben wird (8-16) auslesen von input-field
+TODO chars aufteilen in Sonderzeichen und Numbers
+TODO container bessere Größe und andere farben nehmen
+-->
+
+
+</html>
