@@ -1,4 +1,4 @@
 # blindSITEd
 Website to showcast some side projects
 
-https://closer2u.github.io/blindSITEd/
+[Take a look](https://closer2u.github.io/blindSITEd/)
