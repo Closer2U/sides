@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>README</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    
+    <style rel="stylesheet">
+   /*  @font-face {
+    font-family: 'my_underwoodregular';
+         url('myunderwood-webfont-wf.svg#my_underwoodregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+} */
+
+
+/* ===================== =================== ==================*/
+ /* =====================  Basic align =================== */
+/* ===================== ======================== ============*/
+
+
+ /* =====================  make img scale to smaller screens =================== */
+.responsive{
+  max-width: 100%;
+  height: auto;
+} 
+
+ /* ===================== Screen divided into 3 parts --> deskIllustr., Kanban, Gallery =================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 2px 0px;
+  grid-template-areas:
+    "."
+    "."
+    ".";
+}
+
+
+ /* =====================  Gallery: https://codepen.io/stefcharle/pen/Gydvbx =================== */
+ /*.grid-container-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 2px 0px;
+  grid-template-areas:
+    "."
+    ".";
+}*/
+
+.container {
+  padding: 75px 0;
+  margin: 0 auto;
+  width: 89vw;
+}
+
+h1 {
+  position: relative;
+  margin-bottom: 45px;
+  /* font-family: "Helvetica", sans-serif; */
+  font-size: 44px;
+  /* text-transform: uppercase; */
+  color: #424242;
+  text-decoration-skip-ink: auto;
+  text-decoration: solid underline;
+  text-decoration-color: darkgrey ;
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+}
+    .item:hover {
+      flex: 7;
+    }
+
+    .item-1 {
+      background-image: url("https://cdn.statically.io/gh/Closer2U/vanilla_and_chocolate/master/assets/images/magic-fire.png");
+    }
+      .item-1:hover{
+        flex: 3.5;
+      }
+
+    .item-2 {
+      background-image: url("https://cdn.statically.io/gh/Closer2U/vanilla_and_chocolate/master/assets/images/2021-04-06-Potion.png");
+    }
+      .item-2:hover{
+        flex: 3.5;
+      }
+
+    .item-3 {
+      background-image: url("https://cdn.statically.io/gh/Closer2U/vanilla_and_chocolate/master/assets/images/2021-01-15-tinydancer.png");
+    }
+
+    .item-4 {
+      background-image: url("https://cdn.statically.io/gh/Closer2U/vanilla_and_chocolate/master/assets/images/2021-01-19-chameleon.png");
+    }
+
+    .item-5 {
+      background-image: url("https://cdn.statically.io/gh/Closer2U/vanilla_and_chocolate/master/assets/images/2021-01-26-paperpond.png");
+    }
+
+    .item-6 {
+      background-image: url("https://cdn.statically.io/gh/Closer2U/vanilla_and_chocolate/master/assets/images/2021-01-05-eis3.png");
+    }
+      .item-6:hover{
+          flex: 3.2;
+        }
+
+
+     </style> 
+</head>
+
+<body> 
+
+    <div class="grid-container">
+
+
+
+ <!-- ===================== =================== ==========
+        ===============  DESK ILLUSTRATION ==================== 
+           ============= ======================== ============ -->
+<div class="deskIllustrationHEADER" style="height: fit-content;">
+    <!-- <div style="width: auto; height: fit-content;"> -->
+      <div  style="justify-content: center; margin-left: 15%; margin-right: 20%;"> 
+        <img id="illustration" class="responsive" alt="placeholder" src="desk-illustrationpredoneMINI.svg" width="1000" height="600" >
+      </div>
+    <!-- </div> -->
+</div>  
+
+ <div>
+                  <br /> 
+                    <hr />
+                  <br /><br />
+</div>
+
+
+ <!-- ===================== =================== ==========
+        ===============  KANBAN PROJEKTE ==================== 
+           ============= ======================== ============ -->
+<div class="kanban"> 
+<div>
+<div style="position: relative; width: 92vw; margin-left: 3vw;">
+<div class="paper" id ="kanban" style="display: grid; grid-template-columns: 34% 34% 34%; grid-gap: 1em; border-radius: 25px 25px 25px 25px; height: auto; justify-content: baseline; ">
+  
+  <div id="wip">
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkblue;">
+      <input type="text" style="min-height: 100%; width:100%; margin: 0;" placeholder="Projects in progress">
+      
+  <!--- HIER WEITER: evtl oberste header als inley ala unten quote ||  außßerdem alles noch animieren --->    
+      
+      
+    </div>
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkgray;">
+        Item
+    </div>
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkgrey;">
+        In active development:
+        <input type="checkbox" checked disabled>
+        <input type="checkbox" disabled> 
+    </div>
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkgrey;">
+        Item
+     </div>
+  </div>
+  
+  
+  <div id="notYetStarted">
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkblue; grid-area: header;">
+        <h5><u>Projects in progress</u></h5>
+    </div>
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkgray;">
+        Item
+    </div>
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkgrey;">
+        In active development:
+        <input type="checkbox" checked disabled>
+        <input type="checkbox" disabled> 
+    </div>
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkgrey;">
+        Item
+     </div>
+    </div>
+    
+  <div id="ideas" style="margin-right: 20%;">
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkblue; grid-area: header;">
+        <h5><u>Projects in progress</u></h5>
+    </div>
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkgray;">
+        Item
+    </div>
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkgrey;">
+        In active development:
+        <input type="checkbox" checked disabled>
+        <input type="checkbox" disabled> 
+    </div>
+    <div class="paper" style="height: 20%; border-left-style: solid; border-size: 8px; border-left-color: darkgrey;">
+        Item
+     </div>
+    </div>
+    
+    
+</div>
+</div>
+</div>
+
+</div>
+
+<div>
+  <br /> 
+    <hr />
+  <br /><br />
+</div>
+
+ <!-- ===================== =================== ==========
+        ===============  QUOTE ==================== 
+           ============= ======================== ============ -->
+<div class="quoteSlider"> 
+  <div>
+  <div style="position: relative ; width: 92vw; margin-left: 3vw;">
+    <div id="quote-box" >
+      <div class="paper" style=" min-height: 100%; margin: 0; padding: 2% 2% 2% 2%; ">
+        <!-- <p id="quote"></p>
+        <p id="source"></p> -->
+
+
+        <!-- ===================== =================== ==========
+                ===============  GALLERY ==================== 
+                  ============= ======================== ============ -->
+      
+        <div class="container">
+          <h1>Some of my current other art projects:</h1>
+
+         <!-- <div class="grid-container-gallery">-->
+          <div class="gallery-wrap">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
+            <div class="item item-6"></div>
+          </div>
+       <!-- </div>-->
+      </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+</div> 
+</body>
+
+</html>
