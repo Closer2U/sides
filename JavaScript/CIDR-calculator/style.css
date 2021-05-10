@@ -1,0 +1,161 @@
+/* ------- text input without arrows -------- */
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+html{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+nav {
+   overflow: hidden;
+   background-color: azure;
+    }
+
+main{
+    max-width: 99vw;
+    display: flex;
+    align-items: center;
+}
+
+/* ------- LANG toggle -------- */
+ /* The switch - the box around the slider */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
+
+/* -------------------------------- */
+
+
+/* -------IP-Address inputs ---------- */
+p{
+     display: flex;
+     flex-direction: row;
+     justify-content: baseline;
+     font-size: 3rem;
+ }
+
+  input[type=text]{
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    max-width: 4rem;
+    
+    /* display: inline-block; */
+  }
+
+  input:invalid {
+    border: 3px solid red;
+}
+    input:disabled{
+        border-style: none;
+    }
+/* ----------------- */
+
+input[type=button]{
+    margin-left: 37%;
+}
+
+input[type=range]{
+  display: inline-block;
+}
+
+/* -------- output ------------ */
+.grid-containerOUT {
+    display: grid;
+    grid-template-columns: 50% max-content;
+    justify-content: center;
+  }
+
+  .grid-containerOUT > *:nth-child(4n + 1),
+  .grid-containerOUT > *:nth-child(4n + 2)
+  {
+      background-color: azure;
+  }
+
+/* -------- */
+
+/* ---------SLIDER------------- */
+
+
+/* ------------------------------- */
+
+/* p:not(input){
+    font-size: 2rem;
+} */
+
+/* TODO Style like Neumorphism or something  PRETTY
+ // TODO Language Toggle pretty 
+    // TODO Language Toggle useful! --> Translate 
+ // TODO navbar --> make useful
+ // TODO test / make responsive
+*/

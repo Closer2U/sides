@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- ======================================== -->
+    <!-- for LOCAL DEVELOPMENT only -->
+
+    <!-- <base href="https://Closer2U.github.io/sides/"> -->
+
+                <!-- comment out <base> and use .css and .js local paths --> 
+      <link href="style.css" rel="stylesheet">
+      <script type="text/javascript" src="calculator.js"></script>
+    
+<!-- ==================================== -->
+
+<!-- CSS -->
+    <!-- <link href="JavaScript/CIDR-calculator/forms.css" rel="stylesheet"> -->
+    <!-- <link href="JavaScript/CIDR-calculator/style.css" rel="stylesheet"> -->
+  
+    
+
+<!-- JavaScript -->
+    <!-- <script type="text/javascript" src="JavaScript/CIDR-calculator/calculator.js"></script> -->
+             
+    
+    <title>CIDR - calculator</title>
+</head>
+<body>
+
+    <nav >
+
+
+    <!-- Container LANGUAGE TOGGLE -->
+        <!-- Rounded switch -->
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+
+    </nav>
+
+
+    <main>
+        <fieldset>
+        <legend><h1>CIDR-calculator</h1> </legend> 
+
+        
+                <p>
+                    <input id="firstTriplet" type="text" pattern="[0-9]+" maxlength="3" placeholder="xxx" /> . <input id="secondTriplet" type="text" pattern="[0-9]+" maxlength="3" placeholder="xxx" />. <input id="thirdTriplet" type="text" pattern="[0-9]+" maxlength="3" placeholder="xxx" />. <input id="fourthTriplet" type="text" pattern="[0-9]+" maxlength="3" placeholder="xxx" />/ <input id="suffix" type="text" pattern="[0-9]+" maxlength="3" placeholder="xxx" disabled />
+                </p>
+
+
+<!-- -----------------SLIDER--------------------
+                <p> <input type="range" min="2" max="3000" value="1500" oninput="sliderValue()" id="hostAmount" /> 
+                </p>
+                <p>Value: <span id="demo"></span></p> -->
+                
+
+              <p>  <input type="number" id="hostAmount2" /> </p>
+
+                <input type="button" value="Calculate" onclick="javascript: calculate()"/>
+
+                <br /> <br />
+
+
+        <section class="grid-containerOUT">
+            <div>Network Bits</div> 
+            <div id="networkBits">xxxx</div>
+
+            <div>Host Bits</div>
+            <div id="hostBits">xxxx</div>  
+
+            <div>Maximum Hosts per Subnet</div>
+            <div id="hostMax">xxxx</div>  
+            
+            <div>Maximum Subnets in Network </div>
+            <div id="subnetMax">xxxx</div>  
+            
+            <div>Subnetmask</div>
+            <div id="subnetmask">xxxx</div>  
+            
+            <div>Wildcard Mask</div>
+            <div id="wildcardmask">xxxx</div>   
+
+            <div>Network Address</div>
+            <div id="networkAddress">xxxx</div>   
+
+            <div>Broadccast Address</div>
+            <div id="broadcastAddress">xxxx</div>   
+
+
+        </section>
+
+    </fieldset>
+    </main>
+
+
+
+</body>
+</html>
