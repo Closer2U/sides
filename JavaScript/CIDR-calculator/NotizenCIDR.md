@@ -126,3 +126,26 @@ https://halle.awo-rpk.de/pluginfile.php?file=%2F1803%2Fmod_assign%2Fintroattachm
 Eingabe: 50 PCs
 Eingabe: IP-Adresse
 Ausgabe: der REST
+
+		
+<br>
+<br>
+
+## SubnetMask calculation
+ ```
+ a = 0b11001              // 11001     input
+mask = (1 << 4)          // 10000     mask 5th bit with 1
+ones = (1 << 5) - 1      // 11111     generate all ones
+mask = mask ^ ones       // 01111     inverted mask
+a = a & mask			// 01001     turn 5th bit off!
+```
+
+This works because the base 2 number with 1 at nth position represents the decimal number 2**(n-1), so 2**(n-1)-1 is the highest number that you can represent with n-1 bits (because we start at zero). That number corresponds to n-1 1's!
+```
+n         2^(n-1)   2^(n-1)     2^(n-1)-1
+2         2         10          01
+3         4         100         011
+4         8         1000        0111
+```
+
+[Source](https://medium.com/@parkerjmed/practical-bit-manipulation-in-javascript-bfd9ef6d6c30)
