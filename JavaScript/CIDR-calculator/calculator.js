@@ -15,11 +15,11 @@ function calculate(firstTrip , secondTrip , thirdTrip , fourthTrip, hostAmount2)
          console.log("How many hosts? (userInput) " + hostAmount);
  
      // Number of hosts to accommodate --> calculate CIDR table SUFFIX
-     var suffixHelper = Math.ceil(Math.log2(hostAmount));
-         console.log("suffix" + suffixHelper);
+     var suffix = Math.ceil(Math.log2(hostAmount));
+         console.log("suffix: " + suffix);
          //TODO output into html  --> /suffix
  
-     var netBit = suffixHelper;
+     var netBit = suffix;
          console.log("Network Bit: " + netBit);
          //TODO output into html 
  
@@ -35,11 +35,62 @@ function calculate(firstTrip , secondTrip , thirdTrip , fourthTrip, hostAmount2)
          console.log("Max hosts per subnet with given suffix: " + maxHosts);
          //TODO output into html 
  
-     var a = 32;
-         console.log("Testing bitwise Subnetmask: " + (a >> hostBit));    
+    //  var a = netBit.toString(2);
+    //      b = a << 8;
+    //      console.log("Testing bitwise Subnetmask: " + (a.toString(2)));    
+
+
+
+
+
+     var subnetmask = function() {
+        var subnetmaskHelper = '';
+        for (var i=0; i<hostBit; i++){
+            subnetmaskHelper = subnetmaskHelper + 1;
+        };
+        console.log("subnetmaskHelper before BitShift: " + subnetmaskHelper);
+
+               
+        //~~~~~~~~~~~~ concat the 0s up to 32
+        console.log(subnetmaskHelper.length)
+        for (j=subnetmaskHelper.length; j < 32; j++){
+            subnetmaskHelper = subnetmaskHelper + 0;
+        };
+          console.log("concated String: " + subnetmaskHelper);
+
+
+        // ~~~~~~~ split into octets --> not yet awesome... 
+        subnetmaskBinary = subnetmaskHelper.toString(2).match(/.{1,8}/g);
+            console.log("Octets: " + subnetmaskBinary);
+        subnetmaskBinarySplit = subnetmaskBinary.toString().split(',');
+        // XXX returns ARRAY!!!!!
+           console.table(subnetmaskBinarySplit);
+
+        //~~~~~~~~~ join binary array with '.'
+            // subnetmaskBinaryFinal = subnetmaskBinarySplit.join('.');
+            // console.log(subnetmaskBinaryFinal);
+
+        //~~~~~~~~~~~ convert binaries to decimal
+        // https://stackoverflow.com/questions/9329446/for-each-over-an-array-in-javascript
+        var index;
+        var arr = [];
+        for (index = 0; index < subnetmaskBinarySplit.length; ++index) {
+            decimal = parseInt((subnetmaskBinarySplit[index]) , 2);
+            arr.push(decimal);
+            console.log(decimal);
+        }
+        console.table(arr);
+        var subnetmaskFinal = arr.join('.');
+        console.log(subnetmaskFinal);
+        //TODO output subnetmaskFinal to HTML
+        };
+        subnetmask();
+
+
  
- 
- 
+        // function dec2bin(dec) {
+        //     return (dec >>> 0).toString(2);
+        //   }
  
  
      

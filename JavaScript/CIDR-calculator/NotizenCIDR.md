@@ -106,6 +106,37 @@ https://halle.awo-rpk.de/pluginfile.php?file=%2F1803%2Fmod_assign%2Fintroattachm
 - NetworkAddress = IP-Address (binary) *BITWISE AND* Subnetmask/prefix (binary)
 - BroadcastAddress = IP-Address *BITWISE OR* Wildcard Mask
 	- Wildcard Mask = inverted Subnet Mask (00000000.00000000.00000000.01111111)
+	 ### Wildcard Mask
+	 > Bitwise NOT (~)#
+		>
+		> The Not operator(~) one of the easiest among others we simply **invert** 1s to 0s and 0s to 1s.
+		> ```
+		>Binary #1      1 1 1 0
+		>               ------- ~
+		>Result:        0 0 0 1  // if only one of two bits is 1, then set bit to 1
+		>
+		>In Javascript: ~0b1110 // Returns -15
+		>```
+
+	***
+
+	<br>
+
+	>Bitwise Left Shift (<<)#
+	>
+	>The Left Shift operator(<<) simply adds 0s to right of your binary by shifting others to left. This is generally used when we want to make room at the end of our binary.
+	>
+	>
+	>```
+	>Binary #1      1 1 1 0
+    >               ------- << 8
+	>Result:        1 1 1 0 0 0 0 0  // if only one of two bits is 1, then set bit to 1
+	>
+	>In Javascript: 0b11100000 << 8 // Returns 57344
+	>```
+	>
+	>Every shift left also multiplies your number as much as you shift left. If you shift 0b1110 << 1 this will give us 28 since 0b1110 was 14.
+
 
 
 | IP Address: 112.3.2.3 /25 | |
