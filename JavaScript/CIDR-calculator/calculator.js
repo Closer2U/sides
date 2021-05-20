@@ -82,7 +82,7 @@ function calculate(firstTrip , secondTrip , thirdTrip , fourthTrip, hostAmount2)
         console.table(arr);
         var subnetmaskFinal = arr.join('.');
         console.log(subnetmaskFinal);
-        //TODO output subnetmaskFinal to HTML
+        //TODO output subnetmaskFinal to HTML 
         };
         subnetmask();
 
