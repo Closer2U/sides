@@ -142,6 +142,13 @@ input[type=range]{
       background-color: azure;
   }
 
+#networkBits , #hostBits , #hostMax , #subnetMax , #subnetmask , #wildcardmask , #networkAddress , #broadcastAddress {
+    text-align: right;
+}
+
+#suffix:disabled {
+  color: green;
+}
 /* -------- */
 
 /* ---------SLIDER------------- */
