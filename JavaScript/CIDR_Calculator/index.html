@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- ======================================== -->
+    <!-- for LOCAL DEVELOPMENT only -->
+
+    <!-- <base href="https://Closer2U.github.io/sides/"> -->
+
+                <!-- comment out <base> and use .css and .js local paths --> 
+      <link href="style.css" rel="stylesheet">
+      <script type="text/javascript" src="calculator.js"></script>
+      
+      <script type="text/javascript" src="toggles.js"></script>
+      
+      <link href="http://fonts.cdnfonts.com/css/sansation" rel="stylesheet">
+    
+<!-- ==================================== -->
+
+<!-- CSS -->
+    <!-- <link href="JavaScript/CIDR-calculator/forms.css" rel="stylesheet"> -->
+    <!-- <link href="JavaScript/CIDR-calculator/style.css" rel="stylesheet"> -->
+
+<!-- Font -->
+    <!-- <link href="http://fonts.cdnfonts.com/css/sansation" rel="stylesheet"> -->
+    
+
+<!-- JavaScript -->
+    <!-- <script type="text/javascript" src="JavaScript/CIDR-calculator/calculator.js"></script> 
+    <script type="text/javascript" src="JavaScript/CIDR-calculator/toggles.js"></script> -->
+    
+    <title>CIDR - calculator</title>
+</head>
+<body>
+
+    <nav >
+        <div>
+            <a href="https://Closer2U.github.io/sides/">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2.25rem" height="auto" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#C7C1AD"><path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/><path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/></g><rect x="0" y="0" width="16" height="16" fill="rgba(0, 0, 0, 0)" /></svg>
+            </a>
+        </div>
+    
+    <!-- Container LANGUAGE TOGGLE -->
+        <!-- Rounded switch -->
+        <div>
+            <label id="colorMode" class="switch" onclick="javascript: darkModeToggle()">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+    </nav>
+
+
+    <main>
+        <fieldset>
+        <legend><h2>CIDR-calculator</h2> </legend> 
+
+        
+                <p>
+                    <input id="firstTriplet" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="text" required pattern="[0-9\.]+" maxlength="3" placeholder="xxx" /> . <input id="secondTriplet" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required pattern="[0-9\.]+" maxlength="3" placeholder="xxx" />. <input id="thirdTriplet" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required pattern="[0-9\.]+" maxlength="3" placeholder="xxx" />. <input id="fourthTriplet" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required pattern="[0-9\.]+" maxlength="3" placeholder="xxx" />/ <input id="suffix" type="text" maxlength="3" placeholder="xxx" disabled />
+                </p>
+
+
+<!-- -----------------SLIDER--------------------
+                <p> <input type="range" min="2" max="3000" value="1500" oninput="sliderValue()" id="hostAmount" /> 
+                </p>
+                <p>Value: <span id="demo"></span></p> -->
+                
+            <div class="center">
+                
+                    <h3> Hosts that need to be served: </h3> 
+                    <input type="number" placeholder="number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="hostAmount2" required pattern="[0-9\.]+" /> 
+                
+           
+                <input id="calcBttn" type="button" value="Calculate" onclick="javascript: calculate()"/>
+            </div>
+                <br /> <br />
+
+
+        <div class="grid-containerOUT">
+            <div>Network Bits</div> 
+            <div id="networkBits">xxxx</div>
+
+            <div>Host Bits</div>
+            <div id="hostBits">xxxx</div>  
+
+            <div>max hosts per Subnet</div>
+            <div id="hostMax">xxxx</div>  
+            
+            <div>max Subnets </div>
+            <div id="subnetMax">xxxx</div>  
+
+            <div>Subnetmask</div>
+            <div id="subnetmask">xxxx</div>  
+            
+            <div>Wildcard Mask</div>
+            <div id="wildcardmask">xxxx</div>   
+
+            <div>Network Address</div>
+            <div id="networkAddress">xxxx</div>   
+
+            <div>Broadcast Address</div>
+            <div id="broadcastAddress">xxxx</div>   
+
+
+        </div>
+
+    </fieldset>
+    </main>
+
+    <script>
+        document.getElementById("hostAmount2").addEventListener("keydown",
+           function(event) {
+              if (!event) {
+                 var event = window.event;
+              }
+                 <!-- event.preventDefault(); -->
+              if (event.keyCode == 13){
+                 calculate();
+              }
+           }, false);
+    </script> 
+
+</body>
+</html>

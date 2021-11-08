@@ -1,0 +1,373 @@
+/* FIXME:
+    media-querie for width:423 @FIXME
+	--> arrange better
+	--> resize paddings
+	--> resize that height fits screen
+	--> span table over full width
+	--> don't show body only main / fieldset
+*/
+
+
+
+/* ------- text input without arrows -------- */
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+    
+*{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+    font-family: 'Sansation', sans-serif;
+    font-size: 1.2rem;
+    
+    width: 98vw;
+    height: auto;
+    overflow:hidden;
+    
+    /* display: -webkit-inline-box; */
+    /* display: -ms-inline-flexbox; */
+    /* display: inline-flex; */
+    /* -webkit-box-align: center; */
+        /* -ms-flex-align: center; */
+            /* align-items: center; */
+    /* -webkit-box-pack: center; */
+        /* -ms-flex-pack: center; */
+            /* justify-content: center; */
+    /* background: -webkit-linear-gradient(317deg, rgb(10, 19, 22) 12%, rgb(93, 79, 133) 100%); */
+    /* background: linear-gradient(133deg, rgb(10, 19, 22) 12%, rgb(93, 79, 133) 100%); */
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-repeat: round;
+    background-size: auto;
+    background-attachment: fixed;
+    
+    color: #C7C1AD; /*#E3D0B0;*/
+
+}
+
+body{
+    width: auto;
+    display : flex;
+    flex-direction : column;
+    flex-wrap : wrap;
+    justify-content : flex-start;
+    align-items : center;
+    align-content : center;
+    
+    padding: 1rem;
+}
+
+
+nav {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
+   -webkit-box-pack: space-between;
+       -ms-flex-pack: space-between;
+           justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+        
+   overflow: hidden;
+   padding-bottom: 1.5rem;
+   width: 97%;
+}
+
+main{
+    width: 99%;
+
+    display: box;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.center{
+    display : flex;
+    flex-direction : column;
+    flex-wrap : wrap;
+    justify-content : center;
+    align-items : center;
+    align-content : center;
+    
+    padding: 1rem;
+    margin: 0;
+}
+
+.center input[type=button]{
+    margin: 2rem;
+    
+    background-image: linear-gradient(to right, #0F2027 0%, #2C5364  51%, #0F2027  100%);
+    margin: 10px;
+    padding: 1rem 2.5rem;
+    
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color:  #FFEDCD;            
+    box-shadow: 0 0 10px #2C5364;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    
+    font-family: 'Sansation', sans-serif;
+    font-weight: bolder;
+    font-size: 1.15rem;
+}
+
+    .center input[type=button]:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #FFEDCD;
+        text-decoration: none;
+    }
+
+.center input[type=number]{
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding: 0.35rem;
+    border-radius: 25px;
+    border: 0.2rem solid #63CAA1; /*#85A89A;*/
+    width: 15vw;
+      text-align: center;
+      font-size: 2.5vw;
+      
+       /* document.getElementById("name").setCustomValidity("Lorum Ipsum"); */
+}
+
+
+/* ------- FIELDSET -------- */
+
+fieldset {
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+  width: auto;
+  border-width: 10px 0 10px;
+  border-style: double;
+  border-color: #C7C1AD; /*#FFEDCD;*/
+  
+  background-color: rgba(10, 10, 10, 0.12);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  z-index: 99;
+  box-shadow: -1px 11px 31px 8px rgba(165, 195, 208, 0.17); /*rgba(93, 79, 133, 0.25);*/
+  border-radius: 33px; 
+  
+  padding: 0 20px 20px;
+  filter: drop-shadow(0 1px 1px rgba(15, 32, 39, 0.25)); /*rgba(64, 5, 37, 0.25)); */
+}
+
+
+
+legend{
+    margin: auto;
+}
+
+h2 {
+  margin: 0 -5px;
+  padding: 0.75em 0.3em 0.75em;
+  border: 3px solid #FFEDCD;
+  line-height: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #FFEDCD;
+}
+
+fieldset p{
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* -------------- /FIELDSET -------------*/
+
+/* ==============   ... =============== ... ===============*/
+
+/* ------- LANG toggle -------- */
+ /* The switch - the box around the slider */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #86CEBD;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
+
+
+/* //HIER WEITER */
+ /* TODO: COLOR INVERT DARKMODE: https://dev.to/ritvikdubey27/dark-mode-in-css-toggle-4ph5 */
+.slider.round:checked ~ body {
+    transition: .5s all;
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* -------------------------------- */
+
+/* ==============   ... =============== ... ===============*/
+
+/* -------IP-Address inputs ---------- */
+p{
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: row;
+             flex-direction: row;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     font-size: 3rem;
+ }
+
+  input[type=text]{
+    text-align: center;
+    font-size: 1.6vw;
+      
+    border-radius: 25px;
+    border: 0.2rem solid #63CAA1;
+    padding: 0.35rem; 
+    width: 7vw;
+    
+    /* display: inline-block; */
+  }
+
+    input:invalid {
+      border: 2px solid #73AD21;
+    }
+    input:disabled{
+        border-style: none;
+    }
+/* ----------------- */
+
+/* input[type=button]{ */
+    /* margin-left: 37%; */
+/* } */
+
+input[type=range]{
+  display: inline-block;
+}
+
+/* -------- output ------------ */
+.grid-containerOUT {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 35% 35%;
+        grid-template-columns: 35% 35%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0.3rem;
+    column-width: auto;
+  }
+
+  .grid-containerOUT > *:nth-child(4n + 1),
+  .grid-containerOUT > *:nth-child(4n + 2)
+  {
+      background-color: #2A404B;
+  }
+  
+  .grid-containerOUT > *:nth-child(even){
+      font-weight:bolder;
+      color: #FFEDCD;
+  }
+  
+  .grid-containerOUT div{
+      padding: 0.3rem;
+  }
+
+#networkBits , #hostBits , #hostMax , #subnetMax , #subnetmask , #wildcardmask , #networkAddress , #broadcastAddress {
+    text-align: right;
+}
+
+#suffix:disabled {
+  color: #000;
+}
+/* -------- */
+
+/* ---------SLIDER------------- */
+
+
+/* ------------------------------- */
+
+/* p:not(input){
+    font-size: 2rem;
+} */
+
+/* TODO Style like Neumorphism or something  PRETTY
+ // TODO Language Toggle pretty 
+    // TODO Language Toggle useful! --> Translate 
+ // TODO navbar --> make useful
+ // TODO test / make responsive
+*/
