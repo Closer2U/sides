@@ -43,7 +43,7 @@ function calculate(firstTrip, secondTrip, thirdTrip, fourthTrip, hostAmount2) {
 //======= OUTPUT ===========
 
     // ===== Number of hosts to accommodate --> calculate CIDR table SUFFIX
-    var suffix = Math.ceil(Math.log2(hostAmount));
+    var suffix = 32 - Math.ceil(Math.log2(hostAmount));
     // 
     document.getElementById("suffix").placeholder = suffix;
     console.log("suffix .innerHTML: " + document.getElementById("suffix").innerHTML.valueOf());
