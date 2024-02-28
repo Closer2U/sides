@@ -1,7 +1,8 @@
 # Best Cheatsheets I've found so far
 
 ## Inspiration for Layout
-- https://codepen.io/pleasedonotdisturb/pen/poqrZLZ
+- [Character Gallery with expanding on hover](https://codepen.io/pleasedonotdisturb/pen/poqrZLZ)
+- [horizontal Gallery with expanding on hover](https://codepen.io/NaveenPantra/pen/bGjgPYR)
 
 <details><summary> HTML </summary>
   
