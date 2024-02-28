@@ -1,5 +1,8 @@
 # Best Cheatsheets I've found so far
 
+## Inspiration for Layout
+- https://codepen.io/pleasedonotdisturb/pen/poqrZLZ
+
 <details><summary> HTML </summary>
   
 |  Preview ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  |      Notes   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ |  Download |
