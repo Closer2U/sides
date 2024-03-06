@@ -1,6 +1,7 @@
 #!/usr/bin/env bash 
 
 ####################################################################################################
+# API CLIENT                                                                                       #
 # >> Register a domain with namecheap. Automatically sets hosts <<                                 #
 #                                                                                                  #
 # 16.01.2024    -   E                                                                              #
